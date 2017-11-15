@@ -26,7 +26,7 @@ List all running process
 
 ### top -b -n2 | grep "Cpu(s)"|tail -n 1 | awk '{print $2 + $4}'
 
-''' bash
+```bash
 top -b | awk -v logfile=/tmp/log.txt '
 {
     if($1 == "PID")
@@ -40,7 +40,7 @@ top -b | awk -v logfile=/tmp/log.txt '
         printf "%s,%s,%s,%s,%s\n",ts,$1,$9,$10,$12 > logfile
     }
 }'
-'''
+```
 
 ### grab data from top
 
