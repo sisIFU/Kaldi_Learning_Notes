@@ -23,6 +23,17 @@ The total time of running and System Performance
 ## List of Commands for logging 
 ### ps aux
 List all running process
+[How to see process created by specific user in Unix/linux](https://unix.stackexchange.com/questions/85466/how-to-see-process-created-by-specific-user-in-unix-linux)
+To view only the processes owned by a specific user, use the following command:
+```bash
+top -U [username]
+```
+Replace the [username] with the required username
+
+If you want to use ps then:
+```bash
+ps -u [username]
+```
 
 ### top -b -n2 | grep "Cpu(s)"|tail -n 1 | awk '{print $2 + $4}'
 
@@ -43,6 +54,9 @@ top -b | awk -v logfile=/tmp/log.txt '
 ```
 
 ### grab data from top
+```bash
+free -h -s 5
+```
 
 get cpu usage , I get nice + user cpu usage.
 Print free memeory and swap usage every 5 second.
@@ -52,4 +66,12 @@ Mem:           1.8G        192M        513M         12M        1.1G        1.4G
 Swap:          2.0G        123M        1.9G
 
 Trace process and system performance
-### Only record the command written by me: USER= "xfu7"
+### How to log finally
+#### First run nohup with time command
+```bash
+time nohup ./run.sh > logs/2017_11_16.log
+```
+#### Second grep top data every 1 second
+```bash
+while true; do top -U xfu7 >> logs/topRecord_11_16.log; sleep 1; done
+```
