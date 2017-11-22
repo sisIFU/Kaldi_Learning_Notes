@@ -10,6 +10,10 @@ Work on logging CPU Usage of Kaldi
 * For both Kaldi and Sphinx
 * Generate a *literature review for children speech recognition*
 
+## 2017-11-22
+* Generate Word-level transcriptions
+* Compare different acoustic model and calculate word error rate
+* 
 ## Important Deadlines
 
 What is Kaldi?

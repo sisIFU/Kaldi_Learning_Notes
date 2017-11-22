@@ -119,7 +119,6 @@ fi
 # My testing
 10 input sentences in /home/xfu7/kaldi/egs/voxforge/s5/data/train/wav.scp file
 10 reference sentences in /home/xfu7/kaldi/egs/voxforge/s5/data/train/text file
-
 ## Input
 ### wav.scp
 zlp-20100110-wwn-b0201 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0201.wav
@@ -132,7 +131,7 @@ zlp-20100110-wwn-b0207 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5
 zlp-20100110-wwn-b0208 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0208.wav
 zlp-20100110-wwn-b0209 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0209.wav
 zlp-20100110-wwn-b0210 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0210.wav
-### reference
+### Reference
 zlp-20100110-wwn-b0201 I ALSO UNDERSTAND THAT SIMILAR BRANCH ORGANIZATIONS HAVE MADE THEIR APPEARANCE IN EUROPE
 zlp-20100110-wwn-b0202 SOCIETY IS SHAKEN TO ITS FOUNDATIONS
 zlp-20100110-wwn-b0203 A MONTH IN AUSTRALIA WOULD FINISH ME
@@ -146,9 +145,9 @@ zlp-20100110-wwn-b0210 WHATEVER HE GUESSED HE LOCKED AWAY IN THE TABOO ROOM OF N
 
 ### Run tri_decode.sh
 ## Result
-
 [xfu7@lin-res30 s5]$ time ./calaulate_wer.sh
 ### tri2a
+```
 zlp-20100110-wwn-b0201 I'VE HIGHER ALSO UNDERSTANDS TO SIMILAR BRANCH ORGANIZATIONS HIS MEAN DEAR PURE IN SEED YOUR IT I HOOF
 zlp-20100110-wwn-b0202 I HIGH SOCIETY IS SHE HE CAN TO IS SUNDAY SHOOTS HA
 zlp-20100110-wwn-b0203 I HUM ONE TO AUSTRALIA WISH FINISH LEAVE
@@ -163,7 +162,9 @@ compute-wer --text --mode=present ark:/home/xfu7/kaldi/egs/voxforge/s5/voxforge_
 %WER 118.09 [ 111 / 94, 50 ins, 2 del, 59 sub ]
 %SER 100.00 [ 10 / 10 ]
 Scored 10 sentences, 0 not present in hyp.
+```
 ### tri2b
+```
 zlp-20100110-wwn-b0201 FIVE TO ELSE SO UNDERSTANDS THIS SIMILAR BRANCH ORGANIZATIONS HIS MEAN DEAR APPEARANCE IN EUROPE TO IF
 zlp-20100110-wwn-b0202 FIGHT SOCIETY IS SHE CAN CHEW IS SUNDAY SHOOTS OF FISH
 zlp-20100110-wwn-b0203 FROM MONTH A AUSTRALIA WHICH FINISH LEAVE FOR
@@ -178,7 +179,9 @@ compute-wer --text --mode=present ark:/home/xfu7/kaldi/egs/voxforge/s5/voxforge_
 %WER 93.62 [ 88 / 94, 35 ins, 2 del, 51 sub ]
 %SER 100.00 [ 10 / 10 ]
 Scored 10 sentences, 0 not present in hyp.
+```
 ### tri2b_mmi
+```
 zlp-20100110-wwn-b0201 I ALSO UNDERSTANDS A SIMILAR BRANCH ORGANIZATIONS HIS MEAN THEIR APPEARANCE IN YOU ARE OF FIGHT
 zlp-20100110-wwn-b0202 SOCIETY IS SHRIEK AND TO IS FOUNDATIONS FISH FOR
 zlp-20100110-wwn-b0203 I'M MONTH A AUSTRALIA WISH FISH LEAVE FUR
@@ -193,7 +196,9 @@ compute-wer --text --mode=present ark:/home/xfu7/kaldi/egs/voxforge/s5/voxforge_
 %WER 77.66 [ 73 / 94, 21 ins, 2 del, 50 sub ]
 %SER 100.00 [ 10 / 10 ]
 Scored 10 sentences, 0 not present in hyp.
+```
 ### tri3b
+```
 zlp-20100110-wwn-b0201 IF I ALSO UNDERSTAND SAYS SCYLLA BRANCH ORGANIZATIONS HIS ME AND A ARE CHEERS AS HE ARE OF FOOD
 zlp-20100110-wwn-b0202 IF SOCIETIES CHIC AND TO IS FOUNDATION LEAST FOR
 zlp-20100110-wwn-b0203 FROM MONTH AUSTRALIA WOULD FINISH LEAD FOR
@@ -208,7 +213,9 @@ compute-wer --text --mode=present ark:/home/xfu7/kaldi/egs/voxforge/s5/voxforge_
 %WER 96.81 [ 91 / 94, 34 ins, 5 del, 52 sub ]
 %SER 100.00 [ 10 / 10 ]
 Scored 10 sentences, 0 not present in hyp.
+```
 ### tri3b_mmi
+```
 zlp-20100110-wwn-b0201 I ALSO UNDERSTAND THIS SCYLLA BRANCH ORGANIZATIONS HIS ME EITHER APPEARANCE IN YOU'RE IF
 zlp-20100110-wwn-b0202 A SOCIETY IS CHIC AND TO IS FOUNDATION SO
 zlp-20100110-wwn-b0203 A LAWN AUSTRALIA WOULD SHE TO SHOW HE
@@ -227,4 +234,5 @@ Scored 10 sentences, 0 not present in hyp.
 real    0m0.300s
 user    0m0.026s
 sys 0m0.013s
+```
 
