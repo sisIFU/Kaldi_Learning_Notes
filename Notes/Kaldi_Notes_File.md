@@ -117,10 +117,13 @@ fi
 
 
 # My testing
+```
 10 input sentences in /home/xfu7/kaldi/egs/voxforge/s5/data/train/wav.scp file
 10 reference sentences in /home/xfu7/kaldi/egs/voxforge/s5/data/train/text file
+```
 ## Input
 ### wav.scp
+```
 zlp-20100110-wwn-b0201 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0201.wav
 zlp-20100110-wwn-b0202 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0202.wav
 zlp-20100110-wwn-b0203 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0203.wav
@@ -131,7 +134,9 @@ zlp-20100110-wwn-b0207 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5
 zlp-20100110-wwn-b0208 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0208.wav
 zlp-20100110-wwn-b0209 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0209.wav
 zlp-20100110-wwn-b0210 /home/xfu7/kaldi/egs/voxforge/s5/../../../egs/voxforge/s5/data/selected/zlp-20100110-wwn/wav/b0210.wav
+```
 ### Reference
+```
 zlp-20100110-wwn-b0201 I ALSO UNDERSTAND THAT SIMILAR BRANCH ORGANIZATIONS HAVE MADE THEIR APPEARANCE IN EUROPE
 zlp-20100110-wwn-b0202 SOCIETY IS SHAKEN TO ITS FOUNDATIONS
 zlp-20100110-wwn-b0203 A MONTH IN AUSTRALIA WOULD FINISH ME
@@ -142,7 +147,7 @@ zlp-20100110-wwn-b0207 I'M AS GOOD AS A MAN SHE URGED
 zlp-20100110-wwn-b0208 YOU READ THE QUOTATIONS IN TODAY'S PAPER
 zlp-20100110-wwn-b0209 HE'S TERRIBLY TOUCHY ABOUT HIS BLACK WARDS AS HE CALLS THEM
 zlp-20100110-wwn-b0210 WHATEVER HE GUESSED HE LOCKED AWAY IN THE TABOO ROOM OF NAOMI
-
+```
 ### Run tri_decode.sh
 ## Result
 [xfu7@lin-res30 s5]$ time ./calaulate_wer.sh
