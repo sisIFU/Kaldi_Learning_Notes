@@ -241,3 +241,7 @@ user    0m0.026s
 sys 0m0.013s
 ```
 
+ins: insertion
+del: deletion
+sub: substutionxs
+

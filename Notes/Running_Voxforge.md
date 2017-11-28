@@ -166,3 +166,8 @@ commands in the logs.
  - decode the file 
 However, it's a bit hard if you don't have a good understanding of how 
 Kaldi works. 
+
+
+## Results with running Voxforge 
+
+
