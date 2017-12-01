@@ -2,8 +2,6 @@
 
 ### Uttrance: Several sentences speaked by one person, or sometimes it can be separted by slience between sentences
 
-
-
 ## Similar Question in Kaldi-help
 
 ### 1. [Split the long audio file into utterances](https://groups.google.com/forum/#!topic/kaldi-help/jiff9IstTmg)
@@ -34,7 +32,9 @@ Thanks for reading this question :)
 Feb 13, 2017
 Thanks,
 
-I was able to re-use that Python script (~/kaldi/egs/aspire/local/multi_condition/create_uniform_segments.py) to split into uniform segments. But I did this thing:
+I was able to re-use that Python script (~/kaldi/egs/aspire/local/multi_condition/create_uniform_segments.py) to split into uniform segments. 
+
+But I did this thing:
 
 I created the folder, and put there my WAV file (~ 44 min)
 My service doesnt know anything about the speakers etc. So I have to create "wav.scp" and add there only 1 utterance.
@@ -91,7 +91,7 @@ You can use the approach used in Aspire to create uniform segments and decode th
 
 https://github.com/kaldi-asr/kaldi/blob/master/egs/aspire/s5/local/multi_condition/prep_test_aspire.sh
 
-local/multi_condition/create_uniform_segments.py
+kaldi/egs/aspire/s5/local/multi_condition/create_uniform_segments.py
 
 Vimal
 ```
@@ -175,8 +175,73 @@ kaldi/egs/wsj/s5/local/run_segmentation_long_utts.sh
 ```
 
 ### 3. [Truncating long utterance to short utterances and extracting MFCC features](https://groups.google.com/forum/#!starred/kaldi-help/EmQ21SNxKDQ)
-
-```bash
-
+* Question Summary
 
 ```
+Hello Dan,
+
+I'm looking to truncate long wav file to fixed 10sec segment and extract MFCC features. Could you please advise me how we can do that?
+
+
+Many thanks and best regards,
+K.Ahilan
+
+
+    
+
+11/21/15
+
+
+Dear Vijay,
+
+Thanks a lot. 
+
+Can we also able to do using this command extract-segments?                                                                                                                      
+
+ extract-segments call-861225-A-0050-0065 call-861225-A 0.0 10.0  
+                                                                                  
+""                                                  
+Extract segments from a large audio file in WAV format.                                                                               
+Usage:  extract-segments [options] <wav-rspecifier> <segments-file> <wav-wspecifier>                                                  
+e.g. extract-segments scp:wav.scp segments ark:- | <some-other-program>                                                               
+ segments-file format: each line is either                                                                                            
+<segment-id> <recording-id> <start-time> <end-time>                                                                                   
+e.g. call-861225-A-0050-0065 call-861225-A 5.0 6.5                                                                                    
+or (less frequently, and not supported in scripts):                                                                                   
+<segment-id> <wav-file-name> <start-time> <end-time> <channel>                                                                        
+where <channel> will normally be 0 (left) or 1 (right)                                                                                
+e.g. call-861225-A-0050-0065 call-861225 5.0 6.5 1                                                                                    
+And <end-time> of -1 means the segment runs till the end of the WAV file                                                              
+See also: extract-rows, which does the same thing but to feature files,                                                               
+ wav-copy, wav-to-duration 
+""
+
+I look forward to hearing from you.
+
+
+Hi Vijay
+
+Is the segments file created manually? In my case, I do not know this and the only input is the source audio file. In that case, can I use the script to generate fixed length segments from my long audio file and then generate MFCC on them
+```
+* Suggested Solutions
+
+```
+11/21/15
+
+
+You could create a segments file in your data directory and then use steps/make_mfcc.sh command on that data directory.
+
+You can look at line for an example.
+ 
+--Vijay
+
+That's what that script is supposed to do (hence the 'uniform' part).
+Perhaps what you want is a script that will do speech/nonspeech segmentation.
+If you have a transcript, there is a script in steps/cleanup/split_long_utterance.sh that can segment a long utterance into smaller pieces.  If not - then we don't have a script currently that does what you want.  Typically if we need this we'd decode using a small model and then figure out the segmentation from the decoding output.  Eventually we will add scripts to do this.
+Dan
+
+
+I think create_uniform_segments.py should still be applicable here-- try it.
+Dans
+```
+
