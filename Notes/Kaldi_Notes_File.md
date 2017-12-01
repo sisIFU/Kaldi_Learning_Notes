@@ -30,6 +30,13 @@ C: maps triphone sequences to monophones
 L: maps monophone sequences to words
 G: FSA grammar (can be built from an n-gram grammar).
 
+### PDF: Probability Density Function
+
+### CRF: Conditional Random Fileds
+
+### VQ: Vector Quantization
+
+### CRFs: conditional random fields
 ## Kaldi WER (%) Scoring
 ### How Kaldi Compute Word Error Rate
 
