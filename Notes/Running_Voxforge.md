@@ -169,5 +169,6 @@ Kaldi works.
 
 
 ## Results with running Voxforge 
+ ssh xiaotingfu@cei-mac02.csc.ncsu.edu
 
 
