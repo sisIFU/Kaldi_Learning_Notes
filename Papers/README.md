@@ -1,4 +1,4 @@
-# A Collection of Recent ASR paper aligned with time
+# Time-Aligned ASR Publications (To be Continued)
 
 ### State-of-the-art ASR Performance Measure
 [WER Are We](https://github.com/syhw/wer_are_we)
