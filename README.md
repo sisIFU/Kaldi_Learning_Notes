@@ -1,6 +1,9 @@
 # Speech Recognition With Kaldi: Some Developer Notes
 This repo will serve as my blog recording how I use Kaldi and the progress I make everyday.
 
+## 2018-01-31
+Update notes in Kaldi data pre-processing using python.
+
 ## 2017-11-15
 Work on logging CPU Usage of Kaldi
 
