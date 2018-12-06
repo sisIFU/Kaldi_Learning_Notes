@@ -2,6 +2,8 @@
 
 ### Uttrance: Several sentences speaked by one person, or sometimes it can be separted by slience between sentences
 
+
+
 ## Similar Question in Kaldi-help
 
 ### 1. [Split the long audio file into utterances](https://groups.google.com/forum/#!topic/kaldi-help/jiff9IstTmg)
